@@ -153,8 +153,6 @@ import 'package:shop_app/PageHome.dart';
 import 'package:shop_app/constants.dart';
 import 'package:shop_app/screens/form/animation.dart';
 import 'package:shop_app/screens/home/components/Daftar.dart';
-import 'package:shop_app/screens/home/components/register.dart';
-import 'package:shop_app/screens/home/home_screen.dart';
 
 class Signin extends StatefulWidget {
   Signin({Key key, this.title}) : super(key: key);
@@ -328,47 +326,6 @@ class _SigninState extends State<Signin> with TickerProviderStateMixin {
                                 style: TextStyle(color: Colors.white),
                               )),
                         ),
-                        SizedBox(height: 20),
-                        Text("With Social Media",
-                            style: TextStyle(color: Colors.grey)),
-                        SizedBox(height: 20),
-                        FadeAnimation(
-                            1,
-                            Row(
-                              children: <Widget>[
-                                Expanded(
-                                  child: Container(
-                                    height: 50,
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(50),
-                                        color: Colors.blue),
-                                    child: Center(
-                                      child: Center(
-                                        child: Text(
-                                          "Facebook",
-                                          style: TextStyle(color: Colors.white),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(width: 20),
-                                Expanded(
-                                  child: Container(
-                                    height: 50,
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(50),
-                                        color: Colors.red),
-                                    child: Center(
-                                      child: Text(
-                                        "Google",
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            )),
                       ],
                     )),
               ),

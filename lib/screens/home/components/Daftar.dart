@@ -210,6 +210,7 @@ class _SignupState extends State<Signup> with TickerProviderStateMixin {
                                     offset: Offset(0, 10))
                               ]),
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.end,
                             children: <Widget>[
                               Container(
                                 padding: EdgeInsets.all(10),
@@ -255,7 +256,7 @@ class _SignupState extends State<Signup> with TickerProviderStateMixin {
                                     showDialog(
                                         context: context,
                                         child: AlertDialog(
-                                          title: Text("Login"),
+                                          title: Text("Daftar"),
                                           content: Text("Berhasil"),
                                           actions: <Widget>[
                                             FlatButton(
@@ -278,32 +279,42 @@ class _SignupState extends State<Signup> with TickerProviderStateMixin {
                                 )),
                           ),
                         ),
-                        ButtonTheme(
-                          minWidth: double.infinity,
-                          child: RaisedButton(
-                              onPressed: () {
-                                showDialog(
-                                    context: context,
-                                    child: AlertDialog(
-                                      title: Text("Apakah kamu Ingin Login?"),
-                                      actions: <Widget>[
-                                        FlatButton(
-                                            onPressed: () {
-                                              Navigator.pushReplacement(context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) {
-                                                return Signin();
-                                              }));
-                                            },
-                                            child: Text("Iya"))
-                                      ],
-                                    ));
-                              },
-                              child: Text(
-                                "DAFTAR",
-                                style: TextStyle(color: Colors.white),
-                              )),
-                        ),
+
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Signin()));
+                          },
+                          child: Text("Login"),
+                        )
+                        // ButtonTheme(
+                        //   minWidth: double.infinity,
+                        //   child: RaisedButton(
+                        //       onPressed: () {
+                        //         showDialog(
+                        //             context: context,
+                        //             child: AlertDialog(
+                        //               title: Text("Apakah kamu Ingin Login?"),
+                        //               actions: <Widget>[
+                        //                 FlatButton(
+                        //                     onPressed: () {
+                        //                       Navigator.pushReplacement(context,
+                        //                           MaterialPageRoute(
+                        //                               builder: (context) {
+                        //                         return Signin();
+                        //                       }));
+                        //                     },
+                        //                     child: Text("Iya"))
+                        //               ],
+                        //             ));
+                        //       },
+                        //       child: Text(
+                        //         "DAFTAR",
+                        //         style: TextStyle(color: Colors.white),
+                        //       )),
+                        // ),
                       ],
                     )),
               ),
